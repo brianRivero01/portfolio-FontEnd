@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+
+    <button type="button" id="Crear" class="btn btn-primary">
+        <span class="fa fa-plus"></span> Agregar
+    </button>
+
+    <div id="ModalCrear" class="modal fade" role="dialog" style="overflow-y: scroll;"> 
+    	<div class="modal-dialog">
+    		<div class="modal-content">
+    			<div class="modal-header"> 
+    				<h4 class="modal-tittle">Crear</h4> 
+    			</div> 
+    			<form class="form-horizontal" role="form" id="form-crear">
+    				<div class="modal-body"> 
+
+                        <div class="">
+    						<span class="">Título:</span>
+    						<div class="">
+                                <span>FULL STACK DEVELOPER JR</span>
+    							<button type="button" class="btn btn-primary" id="agregar_nombres">
+                        			<span class="hidden-xs"> Cambiar</span> 
+    							</button>
+    						</div>
+    					</div> 
+
+    					<div class="">
+    						<span class="">Nombre:</span>
+    						<div class="">
+                                <p id="nameModal1">RIVERO BRIAN TOMÁS</p>
+    							<button type="button" class="btn btn-primary" id="agregar_nombres">
+                        			<span class="hidden-xs"> Cambiar</span> 
+    							</button>
+    						</div>
+    					</div> 
+
+                        <div class="">
+    						<span class="">Acerca de mí:</span>
+    						<div class="">
+                                <span>Rivero Brian Tomás</span>
+    							<button type="button" class="btn btn-primary" id="agregar_nombres">
+                        			<span class="hidden-xs"> Cambiar</span> 
+    							</button>
+    						</div>
+    					</div> 
+    				</div>
+    				<div class="modal-footer">
+    					<button type="button" class="btn btn-default" data-dismiss="modal">
+    						<span class="glyphicon glyphicon-remove"></span>
+                        	<span class="hidden-xs"> Cerrar</span> 
+    					</button>
+    					<button type="button" id="Guardar" name="Guardar" class="btn btn-primary">
+    						<span class="fa fa-save"></span>
+                        	<span class="hidden-xs"> Guardar</span> 
+    					</button>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+    <div id="ModalAgregarNombre" class="modal fade" role="dialog"> 
+    	<div class="modal-dialog">
+    		<div class="modal-content">
+    			<div class="modal-header"> 
+    				<h4 class="modal-tittle">Agregar</h4>
+    			</div> 
+    			<form class="form-horizontal" role="form" id="form-agregar">
+    				<div class="modal-body"> 
+    					<div class="form-group col-md-12">
+    						<label for="agregar_nombre" class="control-label col-sm-4">Nombre: </label>
+    						<div class="col-sm-8">
+    							<input type="text" class="form-control" id="agregar_nombre" name="agregar_nombre" value="RIVERO BRIAN TOMÁS">
+    						</div>
+    					</div> 
+    				</div>
+    				<div class="modal-footer">
+    					<button type="button" class="btn btn-default" data-dismiss="modal">
+    						<span class="glyphicon glyphicon-remove"></span><span class="hidden-xs"> Cerrar</span>
+    					</button>
+    					<button type="button" id="save" name="GuardarNombre" class="btn btn-primary">
+    						<span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                          
+    					</button>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+
+    <script src="borrar-u.js"></script>
+</body>
+</html>

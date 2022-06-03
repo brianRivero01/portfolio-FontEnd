@@ -1,0 +1,15 @@
+.box-projects{
+    position: relative;
+    top: 400px;
+    
+  }
+
+  .box-projects h3{
+    padding-top: 4px;
+  }
+
+  .img-project{
+    width: 548px;
+    margin-left: 3px;
+    margin-bottom: 30px;
+  }

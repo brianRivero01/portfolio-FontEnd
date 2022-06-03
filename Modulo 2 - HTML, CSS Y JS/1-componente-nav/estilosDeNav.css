@@ -1,0 +1,40 @@
+nav{
+    height: 70px;
+    color: #FFF;
+    border-bottom: 1px solid #f6e7ec;
+    margin-bottom: 15px;
+}
+
+#nav-side-left img{
+    margin-right: 10px;
+}
+
+#nav-side-left span{
+    font-weight: bold;
+}
+
+.link-social-media{
+    border: none;
+    background: none;
+    color: #FFF;   
+    padding: 0px 3px;
+
+}
+
+.btn-edit{
+    position: absolute;
+    color: #1a1919;
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    
+}
+
+.logeo{
+    color: #e20d4d;
+    margin-left: 8px;
+}
+
+.logeo:hover{
+    color: #c92758;
+}

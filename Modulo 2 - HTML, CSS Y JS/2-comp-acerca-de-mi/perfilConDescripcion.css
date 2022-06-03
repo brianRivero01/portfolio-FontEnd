@@ -1,0 +1,32 @@
+#img-banner{
+    height: 500px;
+    width: 1107px;
+    position: absolute;
+}
+
+#img-profile{
+    height: 200px;
+    border-radius: 50%;
+    position:relative;
+    top:365px;
+    left: 20px;
+}
+
+.box-about{
+    position: relative;
+    top: 400px;
+}
+
+.box-about>span,#box-personal-information{
+    float: left;
+}
+
+.box-about > span,h2,p{
+    position: relative;
+    top: -15px;
+}
+
+#box-personal-information{
+    width:820px;
+    margin-left: 30px;  
+}

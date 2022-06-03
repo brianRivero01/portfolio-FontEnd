@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="1-componente-nav/estilosDeNav.css">
+    <link rel="stylesheet" href="2-comp-acerca-de-mi/perfilConDescripcion.css">
+    <link rel="stylesheet" href="3-comp-exp-laboral/exp-laboral.css">
+    <link rel="stylesheet" href="4-comp-estudio-cursos/cursos.css">
+    <link rel="stylesheet" href="5-comp-saberes/saberes.css">
+    <link rel="stylesheet" href="6-comp-proyectos/proyectos.css">
+    <link rel="stylesheet" href="estilos-modal-uno/estilo.css">
+    <link rel="stylesheet" href="estilosModal.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Muli',sans-serif;       
+            background-color: #050505; 
+        }
+
+        hr{
+            width: 100%;
+            color: #e20d4d;
+        }
+
+        hr:not([size]) {
+            height: 3px;
+        }
+
+        .parrafos {
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #5f5e5e;
+            letter-spacing: .3px;
+            margin-bottom: 0;
+            
+        }
+
+        h2,h3{
+            color: #e20d4d;
+        }
+
+        h4{
+            color: #FAFAFA;
+        }
+
+
+    </style>
+</head>
+<body>
+        
+        <header>
+        
+            <nav class="navbar navbar-expand-md bd-navbar navbar-dark">
+                <div class="container">
+                    <div id="nav-side-left">
+                        <img src="imagenes-cursos/logo-argentina-programa.PNG" width="50px">
+                        <span>Argentina Programa - #YoProgramo</span>
+                    </div>
+
+                    <div id="nav-side-right" class="ms-auto">
+                        <a class="link-social-media" href="https://www.facebook.com/brian.rivero.942" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="link-social-media" href="https://www.instagram.com/_brianrivero/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="link-social-media" href="https://twitter.com/_BrianRivero_?s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="link-social-media" href="https://www.linkedin.com/in/tom%C3%A1s-brian-rivero-b67605211/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <button class="btn logeo">LOGIN</button>
+                    </div>
+                </div>
+            </nav>
+            <div class="container container-banner">
+                <img id="img-banner" src="banner.jpg">
+                <div>
+                    <img id="img-profile" src="img-profile.jpg">
+                </div>
+            </div>
+            
+        </header>
+       
+        
+        <div class="container box-about">
+            <span id="name" style="font-family:monospace;font-weight: bold; font-size:23px; color: #d1cece; width:262px">RIVERO BRIAN TOMÁS</span>
+            <div id="box-personal-information">
+                <h2 id="title">FULL STACK DEVELOPER JR</h2> 
+                <button id="btn-modal" data-bs-toggle="modal" data-bs-target="#Modal1" data-bs-whatever="@mdo" class="btn btn-edit" style="transform: translate(770px, -130px)"><i class="fa-solid fa-pen"></i></button>
+                <p id="info-personal" class="parrafos">
+                    Hola, mi nombre es Brian, tengo 20 años y soy de Mendoza, Argentina. <br> 
+                    Soy egresado de la escuela secundaria Ingeniero Gabriel del Mazo, recibido como técnico electrónico 
+                    y actualmente estudiante del instituto superior Manuel Belgrano, para la tecnicatura de Desarrollador de Software, encontrandome ya en mi segundo año.
+                    No cuento con experiencias profesionales de programación realizadas, pero tengo proyectos personales hechos
+                    y cursos sobre diferentes lenguajes de programación, algunos terminados y otros en curso como Python y otro sobre desarrollo web.
+                </p>
+            </div>
+            
+            <hr> 
+            
+            <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+                      </div>
+                      <div class="modal-body">
+                          <form enctype="multipart/form-data">
+                            <div class="mb-3 pb-3">
+                                <span class="textoModal">Foto del perfil:</span>
+                                <div class="divFile" id="divFile">
+                                  <p class="textoEdit">Editar</p>
+                                  <input type="file" class="inputEdit" id="inputImg">
+                                </div>         
+                                <img id="imgPerfilModal" src="img-profile.jpg">
+                            </div>
+            
+                            <div class="mb-3 pb-3">
+                                <span class="textoModal">Banner:</span>
+                                <div class="divFile" id="divFile">
+                                  <p class="textoEdit">Editar</p>
+                                  <input type="file" class="inputEdit" id="inputBanner">
+                                </div>
+                                <img id="imgBannerModal" src="banner.jpg">
+                            </div>
+            
+                            <div>
+                              <span class="textoModal">Acerca de mí</span>
+                              <div class="divFile" id="divFile">
+                                  <p class="textoEdit">Editar</p>
+                                  <input type="button" class="inputEdit" id="subModal">
+                              </div>
+                              <div>                              
+                                <h5>Título: </h5>
+                                <p id="tituloModal" class="parrafos pt-2">FULL STACK DEVELOPER JR</p>
+                                <h5>Nombre: </h5>
+                                <p id="nombreModal" class="parrafos pt-2">RIVERO BRIAN TOMÁS</p>
+                                <h5>Información personal: </h5>
+                                <p id="acercaDeMiModal" class="parrafos pt-2">Hola, mi nombre es Brian y tengo 20 años. <br> 
+                                  Soy egresado de la escuela secundaria Ingeniero Gabriel del Mazo, recibido como técnico electrónico 
+                                  y actualmente estudiante del instituto superior Manuel Belgrano, para la tecnicatura de Desarrollador de Software, encontrandome ya en mi segundo año.
+                                  No cuento con experiencias profesionales de programación realizadas, pero tengo proyectos personales hechos
+                                  y cursos sobre diferentes lenguajes de programación, algunos terminados y otros en curso como Python y otro sobre desarrollo web.
+                                </p>
+                              </div>
+            
+                            </div>
+            
+                          </form>
+                      </div>
+            
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="save">Guardar</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            
+            <div id="ModalCambiarDatosPersonales" class="modal fade" role="dialog"> 
+              <div class="modal-dialog">
+                <div class="modal-content cajaSubModal">
+                  <div class="modal-header"> 
+                    <h4 class="modal-tittle">Agregar</h4>
+                  </div> 
+                  <form class="form-horizontal" role="form" id="form-agregar">
+                    <div class="modal-body"> 
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Título: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="agregar_titulo" name="agregar_titulo" value="FULL STACK DEVELOPER JR">
+                        </div>
+                      </div> 
+            
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Nombre: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="agregar_nombre" name="" value="RIVERO BRIAN TOMÁS">
+                        </div>
+                      </div> 
+            
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Acerca de mí: </label>
+                        <div class="col-sm-8">
+                          <textarea id="textareaContenido" rows="7" cols="55">Hola, mi nombre es Brian y tengo 20 años. Soy egresado de la escuela secundaria Ingeniero Gabriel del Mazo, recibido como técnico electrónico y actualmente estudiante del instituto superior Manuel Belgrano, para la tecnicatura de Desarrollador de Software, encontrandome ya en mi segundo año. No cuento con experiencias profesionales de programación realizadas, pero tengo proyectos personales hechos y cursos sobre diferentes lenguajes de programación, algunos terminados y otros en curso como Python y otro sobre desarrollo web.</textarea>
+                        </div>
+                      </div> 
+            
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+            
+                      <button type="button" id="save-SUB" name="GuardarNombre" class="btn btn-primary">
+                        <span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                                  
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+    
+        </div>
+        
+            
+        <div class="container box-experience">
+            <h3 class="pb-2">EXPERIENCIAS LABORALES</h3>
+            <button id="btn-modalLab" data-bs-toggle="modal" data-bs-target="#Modal2" data-bs-whatever="@mdo" class="btn btn-edit" style="transform: translate(1065px, -50px)"><i class="fa-solid fa-pen"></i></button>
+            <div class="experience1">
+                <h4 id="tituloEmpleoUno" class="pb-2">KIOSQUERO</h4>
+                <p id="fechaEmpleoUno" class="parrafos">ABRIL. 2021 - NOV. 2021</p> 
+                <p id="descripcionEmpleoUno" class="parrafos">
+                    Trabajaba como kiosquero en un puesto colocado en mi casa. Mis horarios eran alternados,
+                    ya que iba al secundario por la tarde y a veces me quedaba hasta tarde, pero la mayor parte
+                    del tiempo estaba atendiendo el local. Trabajaba junto a mi padre, el se encargaba de todo lo que 
+                    tenía que ver con la gestión y las compras y a mí me gustaba estar del lado del cliente, vendiendo. 
+                </p>
+            </div>
+
+            <div class="experience2">
+                <h4 id="tituloEmpleoDos" class="pb-2">TESTER</h4>
+                <p id="fechaEmpleoDos" class="parrafos">ACTUALMENTE</p>
+                <p id="descripcionEmpleoDos" class="parrafos">
+                    Actualmente me encuentro trabajando como freelance para una plataforma llamada uTest,
+                    en donde basicamente realizo pruebas de software, donde a mí me llegan proyectos de software de otras empresas
+                    y yo tengo el deber de analizar ese software, encontrar posibles fallos en él y reportarlos
+                    dentro de un ciclo de prueba, donde explico el error en sí. No tengo horarios fijos
+                    ya que depende de las pruebas que me llegan y el horario que yo tenga disponible. 
+                </p>
+            </div> 
+
+            <!--caja reservada para tercer empleo - oculta - -->
+            <div id="experience3">
+              <h4 id="tituloEmpleoTres" class="pb-2"></h4>
+              <p id="fechaEmpleoTres" class="parrafos"></p>
+              <p id="descripcionEmpleoTres" class="parrafos">
+                   
+              </p>
+            </div> 
+
+            <hr>
+
+            <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Editar experiencias laborales</h5>
+                      </div>
+                      <div class="modal-body">
+                          <form enctype="multipart/form-data">
+
+                            <div>
+                              <span class="textoModal pb-3">EXPERIENCIAS</span>
+                              <div class="divFile" id="divFile">
+                                <button id="botonEditarModalExperiencias" type="button" class="textoEdit textoAgregar" data-toggle="modal" data-target="#modalEditarExperienciaLab">Editar</button>
+                                <button id="botonAgregarModalExperiencias" type="button" class="textoEdit textoAgregar" data-toggle="modal" data-target="#modalAgregarExperienciaLab">Agregar</button>
+                              </div>
+                              <div>                              
+                                <h5 class="pb-3" id="empleoUnoDelModal">KIOSQUERO: </h5>
+                                <p class="parrafos" id="fechaUnoDelModal">ABRIL. 2021 - NOV. 2021</p> 
+                                <p class="parrafos" id="descripcionPrimerEmpleo">
+                                  Trabajaba como kiosquero en un puesto colocado en mi casa. Mis horarios eran alternado ya que iba al secundario por la tarde y a veces me quedaba hasta tarde, pero la mayor parte del tiempo estaba atendiendo el local. Trabajaba junto a mi padre, el se encargaba de todo lo que tenía que ver con la gestión y las compras y a mí me gustaba estar del lado del cliente, vendiendo. 
+                                </p>
+
+                                <h5 id="empleoDosDelModal" class="pb-3">TESTER </h5>
+                                <p id="fechaDosDelModal" class="parrafos">ACTUALMENTE</p>
+                                <p id="descripcionSegundoEmpleo" class="parrafos">
+                                    Actualmente me encuentro trabajando como freelance para una plataforma llamada uTest, en donde basicamente realizo pruebas de software, donde a mí me llegan proyectos de software de otras empresas y yo tengo el deber de analizar ese software, encontrar posibles fallos en él y reportarlos dentro de un ciclo de prueba, donde explico el error en sí. No tengo horarios fijos ya que depende de las pruebas que me llegan y el horario que yo tenga disponible. 
+                                </p>
+
+                                <!--LUGAR GUARDADO EN CASO DE QUE SE AGREGUE OTRO EMPLEO-->
+                                
+                                <h5 id="empleoTresDelModal" class="pb-3"></h5>
+                                <p id="fechaTresDelModal" class="parrafos"></p>
+                                <p id="descripcionTercerEmpleo" class="parrafos"></p>
+                                
+                              </div>
+
+                            </div>
+
+                          </form>
+                      </div>
+      
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="savee">Guardar</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="modalEditarExperienciaLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+              <div class="modal-dialog">
+                <div class="modal-content" style="border: 3px solid #e20d4d;">
+                  <div class="modal-header"> 
+                    <h4 class="modal-tittle">Agregar</h4>
+                  </div> 
+                  <form class="form-horizontal" role="form" id="form-agregar">
+                    <div class="modal-body"> 
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_empleo" class="control-label col-sm-4">Título: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="agregar_empleo" name="agregar_empleo" value="KIOSQUERO">
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="agregar_fecha" name="" value="ABRIL. 2021 - NOV. 2021">
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Descripción: </label>
+                        <div class="col-sm-8">
+                          <textarea id="descripcionEuno" rows="7" cols="55">Trabajaba como kiosquero en un puesto colocado en mi casa. Mis horarios eran alternado ya que iba al secundario por la tarde y a veces me quedaba hasta tarde, pero la mayor parte del tiempo estaba atendiendo el local. Trabajaba junto a mi padre, el se encargaba de todo lo que tenía que ver con la gestión y las compras y a mí me gustaba estar del lado del cliente, vendiendo.</textarea>
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Título: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="empleoDosTitulo" name="agregar_titulo" value="TESTER">
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="empleoDosFecha" name="" value="ACTUALMENTE">
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Descripción: </label>
+                        <div class="col-sm-8">
+                          <textarea id="empleoDosDescripcion" rows="7" cols="55">Actualmente me encuentro trabajando como freelance para una plataforma llamada uTest, en donde basicamente realizo pruebas de software, donde a mí me llegan proyectos de software de otras empresas y yo tengo el deber de analizar ese software, encontrar posibles fallos en él y reportarlos dentro de un ciclo de prueba, donde explico el error en sí. No tengo horarios fijos ya que depende de las pruebas que me llegan y el horario que yo tenga disponible.</textarea>
+                        </div>
+                      </div> 
+
+                      <div id="cajaOculta">
+
+                        <div class="form-group col-md-12 pb-2">
+                          <label for="agregar_nombre" class="control-label col-sm-4">Título: </label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="empleoTresTitulo" name="agregar_titulo" value="">
+                          </div>
+                        </div> 
+
+                        <div class="form-group col-md-12 pb-2">
+                          <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="empleoTresFecha" name="" value="">
+                          </div>
+                        </div> 
+
+                        <div class="form-group col-md-12 pb-2">
+                          <label for="agregar_nombre" class="control-label col-sm-4">Descripción: </label>
+                          <div class="col-sm-8">
+                            <textarea id="empleoTresDescripcion" rows="7" cols="55"></textarea>
+                          </div>
+                        </div> 
+                      </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+
+                      
+                      <button type="button" id="save-SUB" name="GuardarNombre" class="btn btn-primary">
+                        <span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                                  
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal fade" id="modalAgregarExperienciaLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+              <div class="modal-dialog">
+                <div class="modal-content cajaSubModal">
+                  <div class="modal-header"> 
+                    <h4 class="modal-tittle">Agregar</h4>
+                  </div> 
+                  <form class="form-horizontal" role="form" id="form-agregar">
+                    <div class="modal-body"> 
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Empleo: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="valorEmpleo" name="agregar_titulo">
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="valorFecha" name="">
+                        </div>
+                      </div> 
+
+                      <div class="form-group col-md-12 pb-2">
+                        <label for="agregar_nombre" class="control-label col-sm-4">Descripcion: </label>
+                        <div class="col-sm-8">
+                          <textarea id="valorDescrip" rows="7" cols="55"></textarea>
+                        </div>
+                      </div> 
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span><span class="hidden-xs"> Cerrar</span>
+                      </button>
+                      <button type="button" id="save" name="GuardarNombre" class="btn btn-primary">
+                        <span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                                  
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="container box-academic-data" id="caja_contenedora_cursos">
+            <h3 class="mb-4">FORMACIÓN ACADÉMICA</h3>
+
+            <div class="est-box">
+
+              <div class="cajaDeImg">
+                <img class="logo-esc" src="imagenes-cursos/logo-esc-secundaria.png">
+                <button id="botonAgregarCurso" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#ModalCursos" data-bs-whatever="@mdo" class="btn btn-edit" style="transform: translate(1070px, -150px)"><i class="fa-solid fa-plus"></i></button>
+              </div>
+
+              <div class="cajaDescripc">
+                <h4 class="pb-1">ING.GABRIEL DEL MAZO 4-020</h4>
+                <p class="parrafos text-esc-data">
+                  NIVEL: SECUNDARIO<br>
+                  LOCALIDAD: GODOY CRUZ <br>
+                  PERIODO: 2015 A 2020<br>
+                  TÍTULO: TÉCNICO ELECTRÓNICO
+                  
+                </p>
+              </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="est-box">
+
+              <div class="cajaDeImg">
+                <img class="logo-esc" src="imagenes-cursos/logo-facul.png">
+              </div>
+
+              <div class="cajaDescripc">
+                <h4 class="pb-1">INSTITUTO MANUEL BELGRANO 9-008</h4>
+                <p class="parrafos text-esc-data">
+                    NIVEL: SUPERIOR<br>
+                    LOCALIDAD: GODOY CRUZ <br>
+                    PERIODO: 2021 - 2023<br>
+                    TÍTULO: DESARROLLADOR DE SOFTWARE
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="est-box">
+
+              <div class="cajaDeImg">
+                <img class="logo-esc" src="imagenes-cursos/python-icon.svg">
+              </div>
+
+              <div class="cajaDescripc">
+                <h4 class="pb-1">PYTHON NIVEL INICIAL</h4>
+                <p class="parrafos text-esc-data">
+                    CURSO PRESENCIAL (CASA DEL FUTURO, SARMIENTO 2291, GODOY CRUZ)<br>
+                    NIVEL: BÁSICO<br> 
+                    PERIODO: MARZO - JUNIO DE 2021 (60 HORAS A RELOJ)<br>
+                    TECNOLOGÍAS VISTAS: Python<br>
+                    PROYECTO FINAL: PROGRAMA DE INTERACCIÓN CON EL USUARIO PARA LA COMPRA DE ENTRADAS DE UN CINE.
+                </p>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+
+            <div class="est-box">
+
+              <div class="cajaDeImg">
+                <img class="logo-esc" src="imagenes-cursos/udemy-logo.svg">
+              </div>
+
+              <div class="cajaDescripc">
+                <h4 class="pb-1">DESARROLLO WEB COMPLETO 2.0</h4>
+                <p class="parrafos text-esc-data">
+                    CURSO ONLINE<br>
+                    NIVEL: BÁSICO<br> 
+                    PERIODO: EN CURSO<br>
+                    TECNOLOGÍAS VISTAS: HTML5, CSS3, Javascript, jQuery, Bootstrap, WordPress, PHP, MySQL, APIs, apps móviles y Python.
+                </p>
+              </div>
+            </div>
+
+            <div class="est-box">
+
+              <div class="cajaDeImg">
+                <img class="logo-esc logo-arg-programa" src="imagenes-cursos/logo-argentina-programa-dos.PNG">
+              </div>
+
+              <div class="cajaDescripc">
+                <h4 class="pb-1">ARGENTINA PROGRAMA PRIMERA ETAPA #SéProgramar</h4>
+                <p class="parrafos text-esc-data">
+                    CURSO VIRTUAL<br>
+                    NIVEL: BÁSICO<br> 
+                    PERIODO: SEPTIEMBRE - DICIEMBRE (2021 - 60 HORAS)<br>
+                    TECNOLOGÍAS VISTAS: GOBSTONE, JAVASCRIPT Y RUBY.
+                </p>
+              </div>
+            </div>
+
+            <div class="est-box">
+              <div class="cajaDeImg">
+                <img class="logo-esc logo-arg-programa" src="imagenes-cursos/logo-argentina-programa-dos.PNG">
+              </div>
+
+              <div class="cajaDescripc">
+                <h4 class="pb-1">ARGENTINA PROGRAMA SEGUNDA ETAPA #YoProgramo</h4>
+                <p class="parrafos text-esc-data">
+                    CURSO VIRTUAL<br>
+                    NIVEL: BÁSICO<br> 
+                    PERIODO: 7 MESES (ENE - AGO DEL 2022)<br>
+                    TECNOLOGÍAS VISTAS: HTML5, CSS3,  Javascript, TypeScript, Angular, Bootstrap, Java y MySQL.<br>
+                </p>
+              </div>
+
+            </div>
+       
+
+            <div class="clear"></div>
+
+            <div class="est-box">
+                <div class="cajaDeImg">
+                  <img class="logo-esc" src="imagenes-cursos/python-icon.svg">
+                </div>
+
+                <div class="cajaDescripc">
+                  <h4 class="pb-1">LENGUAJE DE PROGRAMACIÓN PYTHON (PROGRAMA CITI)</h4>
+                  <p class="parrafos text-esc-data">
+                      CURSO VIRTUAL<br>
+                      NIVEL: INTENSIVO<br> 
+                      PERIODO: 4 MESES (FEB - MAY DEL 2022)<br>
+                      TECNOLOGÍAS VISTAS: Python
+                  </p>
+                </div>
+                
+            </div>
+
+            <div class="modal fade" id="ModalCursos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                      </div>
+                      <div class="modal-body">
+                          <form enctype="multipart/form-data">
+
+                            <div id="caja_contenedora_cursos">
+
+                              <div>
+                                <span class="textoModal">Imagen</span>
+                                <div class="divFile divFilex2" id="divFile">
+                                  <p class="textoEdit">Add</p>
+                                  <input type="file" class="inputEdit" id="inputImgDeCurso">
+                                </div>   
+                                <p id="imagen_cargada">La imagen se cargó correctamente!</p>      
+                              </div>
+
+                              <div class="pb-3">
+                                <span class="textoModal">Título:</span>
+                                <input type="text" class="input_cursos" id="tituloCursoNuevo">
+                              </div>
+
+                              <div class="pb-2">
+                                <span class="textoModal">Tipo de curso:</span>
+                                <select id="modalidadDelCurso">
+                                  <option value="PRESENCIAL">Presencial</option>
+                                  <option value="VIRTUAL">Virtual</option>
+                                  <option value="ONLINE">Online</option>
+                                </select>
+                              </div>
+                              
+                              <div class="pb-3">
+                                <span class="textoModal">Nivel:</span>
+                                <select id="nivelDelCurso">
+                                  <option value="BÁSICO">Básico</option>
+                                  <option value="INTERMEDIO">Intermedio</option>
+                                  <option value="AVANZADO">Avanzado</option>
+                                </select>
+                              </div>
+
+                              <div class="pb-3">
+                                <span class="textoModal">Duración:</span>
+                                <input id="duracion" type="text" class="input_cursos">
+                              </div>
+
+                              <div class="pb-3">
+                                <span class="textoModal">Tecnologías vistas:</span>
+                                <input id="tecnologiasAprendidas" type="text" class="input_cursos">
+                              </div>
+                              
+
+                            </div>
+
+                          </form>
+                      </div>
+      
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="saveCurso">Guardar</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+        </div>
+          
+        <div class="container box-skills">
+              <hr>
+              <h3 class="pb-3">SABERES EN DISTINTAS TECNOLOGÍAS</h3>
+              <div class="supreme">
+                  <div class="container-cards">
+                    <div class="card">
+                      <div class="box">
+                        <div class="percent">
+                          <svg class="svg-circle">
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                          </svg>
+                          <div class="number">
+                            <h2>90<span>%</span></h2>
+                          </div>
+                        </div>
+                        <h2 class="text">Html</h2>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="box">
+                        <div class="percent">
+                          <svg class="svg-circle">
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                          </svg>
+                          <div class="number">
+                            <h2>80<span>%</span></h2>
+                          </div>
+                        </div>
+                        <h2 class="text">Css</h2>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="box">
+                        <div class="percent">
+                          <svg class="svg-circle">
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                          </svg>
+                          <div class="number">
+                            <h2>35<span>%</span></h2>
+                          </div>
+                        </div>
+                        <h2 class="text">Javascript</h2>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="container-cards container-cards-two">
+                  <div class="card card-two">
+                    <div class="box">
+                      <div class="percent">
+                        <svg class="svg-circle">
+                          <circle cx="70" cy="70" r="70"></circle>
+                          <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                          <h2>35<span>%</span></h2>
+                        </div>
+                      </div>
+                      <h2 class="text">PYTHON</h2>
+                    </div>
+                  </div>
+                  <div class="card card-two">
+                    <div class="box">
+                      <div class="percent">
+                        <svg class="svg-circle">
+                          <circle cx="70" cy="70" r="70"></circle>
+                          <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                          <h2>20<span>%</span></h2>
+                        </div>
+                      </div>
+                      <h2 class="text">JAVA</h2>
+                    </div>
+                  </div>
+                  <div class="card card-two">
+                    <div class="box">
+                      <div class="percent">
+                        <svg class="svg-circle">
+                          <circle cx="70" cy="70" r="70"></circle>
+                          <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                          <h2>15<span>%</span></h2>
+                        </div>
+                      </div>
+                      <h2 class="text">JQUERY</h2>
+                    </div>
+                  </div>
+                </div>        
+        </div>
+
+        <div class="box-projects container">
+          <hr>
+          <h3 class="pb-2">PROYECTOS</h3>
+          
+
+          <div class="project-1">
+            <h4 style="padding-bottom:10px">RÉPLICA DE SITIOS WEB</h4>
+            <p class="parrafos">
+              En mis tiempos libres me gusta elegir páginas de aplicaciones web e 
+              intentar hacerlas por mí mismo, incluyendo todo lo que es su contenido y
+              las funcionalidades que estas páginas ofrecen. Esto me ha servido un montón
+              y me ha ayudado a poner en práctica mis conocimientos así como también aprender 
+              funcionalidades nuevas para aplicar a la hora de estar haciendo un sitio web.
+              Dejo acá un par de ejemplos:   
+            </p>
+            <img class="img-project" src="imagenes-proyectos/1.PNG">
+            <img class="img-project" src="imagenes-proyectos/2.PNG">
+            <img class="img-project" src="imagenes-proyectos/3.PNG">
+            <img class="img-project" src="imagenes-proyectos/4.PNG">
+          </div>
+
+          <div class="project-2">
+            <h4 style="padding-bottom:10px">PORTFOLIO WEB</h4>
+            <p class="parrafos">
+              Proyecto final de la segunda etapa del curso de Argentina Programa. 
+              Portfolio personal donde expongo toda información profesional realizada, ya sean 
+              cursos, experiencias profesionales, formación académica, así como también, gráficos acerca de 
+              distintos conocimientos en programación.
+              Contiene botones de edición que se muestran al iniciar sesión y que
+              me sirven para editar información o imágenes que se hayan incluido dentro del portfolio. 
+              Este inicio de sesión se valida a través de un usuario y contraseña cuyos datos,
+              con anterioridad, se guardaron en una base de datos. En este proyecto se utilizaron tecnologías
+              como Angular, Spring Boot y MySQL.
+            </p>
+            <img class="img-project" src="imagenes-proyectos/1-portfolio.PNG">
+            <img class="img-project" src="imagenes-proyectos/2-portfolio.PNG">
+          </div>
+
+        </div>
+         
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        
+        <script src="estilos-modal-uno/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+
+        
+   
+</body>
+
+
+
+
+</html>

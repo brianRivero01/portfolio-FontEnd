@@ -1,0 +1,18 @@
+#imgPerfilModal{
+    display: block;
+    border-radius: 50%;
+    height: 200px;
+    margin-left: 25%;   
+}
+
+#imgBannerModal{
+    display: block;
+    width:420px;
+    margin-left: 5%;
+}
+
+.span-modal{
+    display: block;
+    font-size: 14px;
+    color: #FAFAFA;
+}
