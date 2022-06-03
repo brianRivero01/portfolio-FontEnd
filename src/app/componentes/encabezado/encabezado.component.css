@@ -1,0 +1,49 @@
+nav{
+    height: 70px;
+    color: #FFF;
+    
+    
+}
+
+#nav-side-left img{
+    margin-right: 10px;
+}
+
+#nav-side-left span{
+    font-weight: bold;
+}
+
+.link-social-media{
+    border: none;
+    background: none;
+    color: #FFF;   
+    padding: 0px 3px;
+
+}
+
+.link-social-media:hover{
+    color: #c02968;
+}
+
+.logeo{
+    color: #e20d4d;
+    margin-left: 8px;
+}
+
+.logeo:hover{
+    color: #c92758;
+}
+
+#img-banner{
+    height: 500px;
+    width: 1107px;
+    position: absolute;
+}
+
+#img-profile{
+    height: 200px;
+    border-radius: 50%;
+    position:relative;
+    top:365px;
+    left: 20px;
+}

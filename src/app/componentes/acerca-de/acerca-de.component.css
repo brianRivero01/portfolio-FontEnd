@@ -1,0 +1,45 @@
+.box-about{
+    position: relative;
+    top: 400px;
+}
+
+.box-about>span,#box-personal-information{
+    float: left;
+}
+
+.box-about > span,h2,p{
+    position: relative;
+    top: -15px;
+}
+
+#box-personal-information{
+    width:820px;
+    margin-left: 30px;  
+}
+
+/* ESTILOS PARA MODAL */
+
+.modal-content
+{
+    background-color: #050505; 
+
+}
+
+#imgPerfilModal{
+    display: block;
+    border-radius: 50%;
+    height: 200px;
+    margin-left: 25%;   
+}
+
+#imgBannerModal{
+    display: block;
+    width:420px;
+    margin-left: 5%;
+}
+
+.span-modal{
+    display: block;
+    font-size: 14px;
+    color: #FAFAFA;
+}

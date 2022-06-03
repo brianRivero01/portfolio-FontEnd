@@ -1,0 +1,220 @@
+<div class="container box-experience">
+    <h3 class="pb-2">EXPERIENCIAS LABORALES</h3>
+    <button id="btn-modal" data-bs-toggle="modal" data-bs-target="#Modal2" data-bs-whatever="@mdo" class="btn btn-edit" style="transform: translate(1065px, -50px)"><i class="fa-solid fa-pen"></i></button>
+    <div class="experience1">
+        <h4 id="tituloEmpleoUno" class="">KIOSQUERO</h4>
+        <p id="fechaEmpleoUno" class="parrafos">ABRIL. 2021 - NOV. 2021</p> 
+        <p id="descripcionEmpleoUno" class="parrafos">
+            Trabajaba como kiosquero en un puesto colocado en mi casa. Mis horarios eran alternados,
+            ya que iba al secundario por la tarde y a veces me quedaba hasta tarde, pero la mayor parte
+            del tiempo estaba atendiendo el local. Trabajaba junto a mi padre, el se encargaba de todo lo que 
+            tenía que ver con la gestión y las compras y a mí me gustaba estar del lado del cliente, vendiendo. 
+        </p>
+    </div>
+
+    <div class="experience2">
+        <h4 id="tituloEmpleoDos" class="pt-3">TESTER</h4>
+        <p id="fechaEmpleoDos" class="parrafos">ACTUALMENTE</p>
+        <p id="descripcionEmpleoDos" class="parrafos">
+            Actualmente me encuentro trabajando como freelance para una plataforma llamada uTest,
+            en donde basicamente realizo pruebas de software, donde a mí me llegan proyectos de software de otras empresas
+            y yo tengo el deber de analizar ese software, encontrar posibles fallos en él y reportarlos
+            dentro de un ciclo de prueba, donde explico el error en sí. No tengo horarios fijos
+            ya que depende de las pruebas que me llegan y el horario que yo tenga disponible. 
+        </p>
+    </div> 
+
+    <!--caja reservada para tercer empleo - oculta - -->
+    <div id="experience3">
+      <h4 id="tituloEmpleoTres" class="pt-3"></h4>
+      <p id="fechaEmpleoTres" class="parrafos"></p>
+      <p id="descripcionEmpleoTres" class="parrafos">
+           
+      </p>
+    </div> 
+
+    <hr>
+
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Editar experiencias laborales</h5>
+              </div>
+              <div class="modal-body">
+                  <form enctype="multipart/form-data">
+
+                    <div>
+                      <span class="textoModal pb-3">EXPERIENCIAS</span>
+                      <div class="divFile" id="divFile">
+                        <button id="botonEditarModalExperiencias" type="button" class="textoEdit textoAgregar" data-toggle="modal" data-target="#modalEditarExperienciaLab">Editar</button>
+                        <button id="botonAgregarModalExperiencias" type="button" class="textoEdit textoAgregar" data-toggle="modal" data-target="#modalAgregarExperienciaLab">Agregar</button>
+                      </div>
+                      <div>                              
+                        <h5 class="" id="empleoUnoDelModal">KIOSQUERO: </h5>
+                        <p class="parrafos" id="fechaUnoDelModal">ABRIL. 2021 - NOV. 2021</p> 
+                        <p class="parrafos" id="descripcionPrimerEmpleo">
+                          Trabajaba como kiosquero en un puesto colocado en mi casa. Mis horarios eran alternado ya que iba al secundario por la tarde y a veces me quedaba hasta tarde, pero la mayor parte del tiempo estaba atendiendo el local. Trabajaba junto a mi padre, el se encargaba de todo lo que tenía que ver con la gestión y las compras y a mí me gustaba estar del lado del cliente, vendiendo. 
+                        </p>
+
+                        <h5 id="empleoDosDelModal" class="pt-2">TESTER </h5>
+                        <p id="fechaDosDelModal" class="parrafos">ACTUALMENTE</p>
+                        <p id="descripcionSegundoEmpleo" class="parrafos">
+                            Actualmente me encuentro trabajando como freelance para una plataforma llamada uTest, en donde basicamente realizo pruebas de software, donde a mí me llegan proyectos de software de otras empresas y yo tengo el deber de analizar ese software, encontrar posibles fallos en él y reportarlos dentro de un ciclo de prueba, donde explico el error en sí. No tengo horarios fijos ya que depende de las pruebas que me llegan y el horario que yo tenga disponible. 
+                        </p>
+
+                        <!--LUGAR GUARDADO EN CASO DE QUE SE AGREGUE OTRO EMPLEO-->
+                        
+                        <h5 id="empleoTresDelModal" class="pt-2"></h5>
+                        <p id="fechaTresDelModal" class="parrafos"></p>
+                        <p id="descripcionTercerEmpleo" class="parrafos"></p>
+                        
+                      </div>
+
+                    </div>
+
+                  </form>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                  <button type="button" class="btn btn-primary" id="savee">Guardar</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEditarExperienciaLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+      <div class="modal-dialog">
+        <div class="modal-content" style="border: 3px solid #e20d4d;">
+          <div class="modal-header"> 
+            <h4 class="modal-tittle">Agregar</h4>
+          </div> 
+          <form class="form-horizontal" role="form" id="form-agregar">
+            <div class="modal-body"> 
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_empleo" class="control-label col-sm-4">Título: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="agregar_empleo" name="agregar_empleo" value="KIOSQUERO">
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="agregar_fecha" name="" value="ABRIL. 2021 - NOV. 2021">
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Descripción: </label>
+                <div class="col-sm-8">
+                  <textarea id="descripcionEuno" rows="7" cols="55">Trabajaba como kiosquero en un puesto colocado en mi casa. Mis horarios eran alternado ya que iba al secundario por la tarde y a veces me quedaba hasta tarde, pero la mayor parte del tiempo estaba atendiendo el local. Trabajaba junto a mi padre, el se encargaba de todo lo que tenía que ver con la gestión y las compras y a mí me gustaba estar del lado del cliente, vendiendo.</textarea>
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Título: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="empleoDosTitulo" name="agregar_titulo" value="TESTER">
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="empleoDosFecha" name="" value="ACTUALMENTE">
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Descripción: </label>
+                <div class="col-sm-8">
+                  <textarea id="empleoDosDescripcion" rows="7" cols="55">Actualmente me encuentro trabajando como freelance para una plataforma llamada uTest, en donde basicamente realizo pruebas de software, donde a mí me llegan proyectos de software de otras empresas y yo tengo el deber de analizar ese software, encontrar posibles fallos en él y reportarlos dentro de un ciclo de prueba, donde explico el error en sí. No tengo horarios fijos ya que depende de las pruebas que me llegan y el horario que yo tenga disponible.</textarea>
+                </div>
+              </div> 
+
+              <div id="cajaOculta">
+
+                <div class="form-group col-md-12 pb-2">
+                  <label for="agregar_nombre" class="control-label col-sm-4">Título: </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="empleoTresTitulo" name="agregar_titulo" value="">
+                  </div>
+                </div> 
+
+                <div class="form-group col-md-12 pb-2">
+                  <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="empleoTresFecha" name="" value="">
+                  </div>
+                </div> 
+
+                <div class="form-group col-md-12 pb-2">
+                  <label for="agregar_nombre" class="control-label col-sm-4">Descripción: </label>
+                  <div class="col-sm-8">
+                    <textarea id="empleoTresDescripcion" rows="7" cols="55"></textarea>
+                  </div>
+                </div> 
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+
+              
+              <button type="button" id="save-SUB" name="GuardarNombre" class="btn btn-primary">
+                <span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                          
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalAgregarExperienciaLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+      <div class="modal-dialog">
+        <div class="modal-content cajaSubModal">
+          <div class="modal-header"> 
+            <h4 class="modal-tittle">Agregar</h4>
+          </div> 
+          <form class="form-horizontal" role="form" id="form-agregar">
+            <div class="modal-body"> 
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Empleo: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="valorEmpleo" name="agregar_titulo">
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Fecha: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="valorFecha" name="">
+                </div>
+              </div> 
+
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Descripcion: </label>
+                <div class="col-sm-8">
+                  <textarea id="valorDescrip" rows="7" cols="55"></textarea>
+                </div>
+              </div> 
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove"></span><span class="hidden-xs"> Cerrar</span>
+              </button>
+              <button type="button" id="save" name="GuardarNombre" class="btn btn-primary">
+                <span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                          
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

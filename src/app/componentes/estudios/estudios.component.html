@@ -1,0 +1,202 @@
+<div class="container box-academic-data" id="caja_contenedora_cursos">
+    <h3 class="mb-4">FORMACIÓN ACADÉMICA</h3>
+
+    <div class="est-box">
+
+      <div class="cajaDeImg">
+        <img class="logo-esc" src="./assets/logo-esc-secundaria.png">
+        <button id="botonAgregarCurso" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#ModalCursos" data-bs-whatever="@mdo" class="btn btn-edit" style="transform: translate(1015px, -135px)"><i class="fa-solid fa-plus"></i></button>
+      </div>
+
+      <div class="cajaDescripc">
+        <h4>ING.GABRIEL DEL MAZO 4-020</h4>
+        <p class="parrafos text-esc-data">
+          NIVEL: SECUNDARIO<br>
+          LOCALIDAD: GODOY CRUZ <br>
+          PERIODO: 2015 A 2020<br>
+          TÍTULO: TÉCNICO ELECTRÓNICO
+          
+        </p>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="est-box">
+
+      <div class="cajaDeImg">
+        <img class="logo-esc" src="./assets/logo-facul.png">
+      </div>
+
+      <div class="cajaDescripc">
+        <h4>INSTITUTO MANUEL BELGRANO 9-008</h4>
+        <p class="parrafos text-esc-data">
+            NIVEL: SUPERIOR<br>
+            LOCALIDAD: GODOY CRUZ <br>
+            PERIODO: 2021 - 2023<br>
+            TÍTULO: DESARROLLADOR DE SOFTWARE
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="est-box">
+
+      <div class="cajaDeImg">
+        <img class="logo-esc" src="./assets/python-icon.svg">
+      </div>
+
+      <div class="cajaDescripc">
+        <h4>PYTHON NIVEL INICIAL</h4>
+        <p class="parrafos text-esc-data">
+            CURSO PRESENCIAL (CASA DEL FUTURO, SARMIENTO 2291, GODOY CRUZ)<br>
+            NIVEL: BÁSICO<br> 
+            PERIODO: MARZO - JUNIO DE 2021 (60 HORAS A RELOJ)<br>
+            TECNOLOGÍAS VISTAS: Python<br>
+            PROYECTO FINAL: PROGRAMA DE INTERACCIÓN CON EL USUARIO PARA LA COMPRA DE ENTRADAS DE UN CINE.
+        </p>
+      </div>
+
+    </div>
+    <div class="clear"></div>
+
+    <div class="est-box pt-3">
+
+      <div class="cajaDeImg">
+        <img class="logo-esc" src="./assets/udemy-logo.svg">
+      </div>
+
+      <div class="cajaDescripc">
+        <h4>DESARROLLO WEB COMPLETO 2.0</h4>
+        <p class="parrafos text-esc-data">
+            CURSO ONLINE<br>
+            NIVEL: BÁSICO<br> 
+            PERIODO: EN CURSO<br>
+            TECNOLOGÍAS VISTAS: HTML5, CSS3, Javascript, jQuery, Bootstrap, WordPress, PHP, MySQL, APIs, apps móviles y Python.
+        </p>
+      </div>
+    </div>
+
+    <div class="est-box pt-3">
+
+      <div class="cajaDeImg">
+        <img class="logo-esc logo-arg-programa" src="./assets/logo-argentina-programa-dos.PNG">
+      </div>
+
+      <div class="cajaDescripc">
+        <h4>ARGENTINA PROGRAMA PRIMERA ETAPA #SéProgramar</h4>
+        <p class="parrafos text-esc-data">
+            CURSO VIRTUAL<br>
+            NIVEL: BÁSICO<br> 
+            PERIODO: SEPTIEMBRE - DICIEMBRE (2021 - 60 HORAS)<br>
+            TECNOLOGÍAS VISTAS: GOBSTONE, JAVASCRIPT Y RUBY.
+        </p>
+      </div>
+    </div>
+
+    <div class="est-box pt-3">
+      <div class="cajaDeImg">
+        <img class="logo-esc logo-arg-programa" src="./assets/logo-argentina-programa-dos.PNG">
+      </div>
+
+      <div class="cajaDescripc">
+        <h4>ARGENTINA PROGRAMA SEGUNDA ETAPA #YoProgramo</h4>
+        <p class="parrafos text-esc-data">
+            CURSO VIRTUAL<br>
+            NIVEL: BÁSICO<br> 
+            PERIODO: 7 MESES (ENE - AGO DEL 2022)<br>
+            TECNOLOGÍAS VISTAS: HTML5, CSS3,  Javascript, TypeScript, Angular, Bootstrap, Java y MySQL.<br>
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="clear"></div>
+
+    <div class="est-box pt-3">
+        <div class="cajaDeImg">
+          <img class="logo-esc" src="./assets/python-icon.svg">
+        </div>
+
+        <div class="cajaDescripc">
+          <h4>LENGUAJE DE PROGRAMACIÓN PYTHON (PROGRAMA CITI)</h4>
+          <p class="parrafos text-esc-data">
+              CURSO VIRTUAL<br>
+              NIVEL: INTENSIVO<br> 
+              PERIODO: 4 MESES (FEB - MAY DEL 2022)<br>
+              TECNOLOGÍAS VISTAS: Python
+          </p>
+        </div>
+        
+    </div>
+
+    <div class="modal fade" id="ModalCursos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+              </div>
+              <div class="modal-body">
+                  <form enctype="multipart/form-data">
+
+                    <div id="caja_contenedora_cursos">
+
+                      <div>
+                        <span class="textoModal">Imagen</span>
+                        <div class="divFile divFilex2" id="divFile">
+                          <p class="textoEdit" style="transform: translateY(-12px)">Add</p>
+                          <input type="file" class="inputEdit" id="inputImgDeCurso">
+                        </div>   
+                        <p id="imagen_cargada">La imagen se cargó correctamente!</p>      
+                      </div>
+
+                      <div class="pb-3">
+                        <span class="textoModal">Título:</span>
+                        <input type="text" class="input_cursos" id="tituloCursoNuevo">
+                      </div>
+
+                      <div class="pb-2">
+                        <span class="textoModal">Tipo de curso:</span>
+                        <select id="modalidadDelCurso">
+                          <option value="PRESENCIAL">Presencial</option>
+                          <option value="VIRTUAL">Virtual</option>
+                          <option value="ONLINE">Online</option>
+                        </select>
+                      </div>
+                      
+                      <div class="pb-3">
+                        <span class="textoModal">Nivel:</span>
+                        <select id="nivelDelCurso">
+                          <option value="BÁSICO">Básico</option>
+                          <option value="INTERMEDIO">Intermedio</option>
+                          <option value="AVANZADO">Avanzado</option>
+                        </select>
+                      </div>
+
+                      <div class="pb-3">
+                        <span class="textoModal">Duración:</span>
+                        <input id="duracion" type="text" class="input_cursos">
+                      </div>
+
+                      <div class="pb-3">
+                        <span class="textoModal">Tecnologías vistas:</span>
+                        <input id="tecnologiasAprendidas" type="text" class="input_cursos">
+                      </div>
+                      
+
+                    </div>
+
+                  </form>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                  <button type="button" class="btn btn-primary" id="saveCurso">Guardar</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+  </div>

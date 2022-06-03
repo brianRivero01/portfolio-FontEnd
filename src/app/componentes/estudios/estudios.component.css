@@ -1,0 +1,55 @@
+.box-academic-data{
+    position: relative;
+    top: 408px;
+}
+
+.cajaDeImg{
+    display:inline-block;
+}
+
+.cajaDescripc{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.logo-esc{
+    width: 53px;
+    height: 65px;
+    position: relative;
+    bottom: 60px;
+    /*
+    margin-right: 20px; 
+    margin-bottom: 100px; */
+   
+}
+
+.logo-arg-programa{
+    height: 40px !important
+}
+
+.text-esc-data{
+    display:block;
+    font-size: 15px;
+    font-family:Trebuchet MS 
+    
+}
+
+.clear{
+    clear: left;
+}
+
+.est-box{
+  height: 140px;
+}
+
+#imagen_cargada{
+    display: none;
+    color: #ff0000;
+    font-weight: 700;
+    transform: translateY(15px);
+}
+
+.modal-content
+{
+    background-color: #050505; 
+}

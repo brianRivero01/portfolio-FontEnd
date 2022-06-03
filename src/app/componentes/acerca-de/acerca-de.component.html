@@ -1,0 +1,119 @@
+<div class="container box-about">
+    <span id="name" style="font-family:monospace;font-weight: bold; font-size:23px; color: #d1cece; width:262px">RIVERO BRIAN TOMÁS</span>
+    <div id="box-personal-information">
+        <h2 id="title">FULL STACK DEVELOPER JR</h2> 
+        <button id="btn-modal" data-bs-toggle="modal" data-bs-target="#Modal1" data-bs-whatever="@mdo" class="btn btn-edit" style="transform: translate(770px, -130px)"><i class="fa-solid fa-pen"></i></button>
+        <p id="info-personal" class="parrafos">
+            Hola, mi nombre es Brian y tengo 20 años. <br> 
+            Soy egresado de la escuela secundaria Ingeniero Gabriel del Mazo, recibido como técnico electrónico 
+            y actualmente estudiante del instituto superior Manuel Belgrano, para la tecnicatura de Desarrollador de Software, encontrandome ya en mi segundo año.
+            No cuento con experiencias profesionales de programación realizadas, pero tengo proyectos personales hechos
+            y cursos sobre diferentes lenguajes de programación, algunos terminados y otros en curso como Python y otro sobre desarrollo web.
+        </p>
+    </div>
+    
+    <hr> 
+    
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
+              </div>
+              <div class="modal-body">
+                  <form enctype="multipart/form-data">
+                    <div class="mb-3 pb-3">
+                        <span class="textoModal">Foto del perfil:</span>
+                        <div class="divFile" id="divFile">
+                          <p class="textoEdit">Editar</p>
+                          <input type="file" class="inputEdit" id="inputImg">
+                        </div>         
+                        <img id="imgPerfilModal" src="./assets/img-profile.jpg">
+                    </div>
+    
+                    <div class="mb-3 pb-3">
+                        <span class="textoModal">Banner:</span>
+                        <div class="divFile" id="divFile">
+                          <p class="textoEdit">Editar</p>
+                          <input type="file" class="inputEdit" id="inputBanner">
+                        </div>
+                        <img id="imgBannerModal" src="./assets/banner.jpg">
+                    </div>
+    
+                    <div>
+                      <span class="textoModal">Acerca de mí</span>
+                      <div class="divFile" id="divFile">
+                          <p class="textoEdit">Editar</p>
+                          <input type="button" class="inputEdit" id="subModal">
+                      </div>
+                      <div>                              
+                        <h5>Título: </h5>
+                        <p id="tituloModal" class="parrafos pt-2">FULL STACK DEVELOPER JR</p>
+                        <h5>Nombre: </h5>
+                        <p id="nombreModal" class="parrafos pt-2">RIVERO BRIAN TOMÁS</p>
+                        <h5>Información personal: </h5>
+                        <p id="acercaDeMiModal" class="parrafos pt-2">Hola, mi nombre es Brian y tengo 20 años. <br> 
+                          Soy egresado de la escuela secundaria Ingeniero Gabriel del Mazo, recibido como técnico electrónico 
+                          y actualmente estudiante del instituto superior Manuel Belgrano, para la tecnicatura de Desarrollador de Software, encontrandome ya en mi segundo año.
+                          No cuento con experiencias profesionales de programación realizadas, pero tengo proyectos personales hechos
+                          y cursos sobre diferentes lenguajes de programación, algunos terminados y otros en curso como Python y otro sobre desarrollo web.
+                        </p>
+                      </div>
+    
+                    </div>
+    
+                  </form>
+              </div>
+    
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                  <button type="button" class="btn btn-primary" id="save">Guardar</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <div id="ModalCambiarDatosPersonales" class="modal fade" role="dialog"> 
+      <div class="modal-dialog">
+        <div class="modal-content cajaSubModal">
+          <div class="modal-header"> 
+            <h4 class="modal-tittle">Agregar</h4>
+          </div> 
+          <form class="form-horizontal" role="form" id="form-agregar">
+            <div class="modal-body"> 
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Título: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="agregar_titulo" name="agregar_titulo" value="FULL STACK DEVELOPER JR">
+                </div>
+              </div> 
+    
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Nombre: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="agregar_nombre" name="" value="RIVERO BRIAN TOMÁS">
+                </div>
+              </div> 
+    
+              <div class="form-group col-md-12 pb-2">
+                <label for="agregar_nombre" class="control-label col-sm-4">Acerca de mí: </label>
+                <div class="col-sm-8">
+                  <textarea id="textareaContenido" rows="7" cols="55">Hola, mi nombre es Brian y tengo 20 años. Soy egresado de la escuela secundaria Ingeniero Gabriel del Mazo, recibido como técnico electrónico y actualmente estudiante del instituto superior Manuel Belgrano, para la tecnicatura de Desarrollador de Software, encontrandome ya en mi segundo año. No cuento con experiencias profesionales de programación realizadas, pero tengo proyectos personales hechos y cursos sobre diferentes lenguajes de programación, algunos terminados y otros en curso como Python y otro sobre desarrollo web.</textarea>
+                </div>
+              </div> 
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+    
+              <button type="button" id="save-SUB" name="GuardarNombre" class="btn btn-primary">
+                <span class="fa fa-save"></span><span class="hidden-xs"> Guardar</span>
+                          
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</div>

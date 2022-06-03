@@ -1,1 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
+#body{
+    height: 4760px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Muli',sans-serif;       
+    background-color: #050505; 
+    
+   
+}
+
+hr{
+    width: 100%;
+    color: #e20d4d;
+}
+
+hr:not([size]) {
+    height: 3px;
+}
+
+.parrafos {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #5f5e5e;
+    letter-spacing: .3px;
+    margin-bottom: 0;
+    
+}
+
+h2,h3{
+    color: #e20d4d;
+}
+
+h4{
+    color: #fafafac3;
+}
+
+.btn-edit{
+    position: absolute;
+    color: #1a1919;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    outline:none !important;
+}
+
+
+
+/* ESTILOS PARA MODALES */
+
+
+.modal-footer span{
+    text-align: center;
+}
+
+
+.divFile{
+    display: inline;
+    position: relative;
+    top: 5px;
+    padding:10px;
+    height: 30px;
+    width:90px;
+    border-radius: 5px;
+    float:right;
+    
+}
+
+.modal-title{
+    color: #e20d4d;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.textoEdit{
+    text-align:center;
+    color: #2851A3;
+}
+
+.textoAgregar{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;    
+    padding: 0;
+    transform: translate(13px, -13px);
+}
+
+.textoModal{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: #e20d4d;
+    font-weight: 600;
+    font-size: 19px;
+    margin-right: 10px;
+ 
+}
+
+.inputEdit{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.cajaSubModal{
+    transform: translateY(200px);
+    border: 3px solid #e20d4d;
+    
+}
+
+
+/*MODAL PARA AGREGAR UN CURSO*/
+
+.input_cursos{
+    background-color: transparent;
+    color: #FFF;
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #e013504d;;
+    outline: none;
+}
+
+select{
+    margin-left: 5px;
+}
+
+select:focus{
+    outline:none;
+}
+
+.divFilex2{
+    right: 340px;
+}
+
+
+
+
+/* 
+    ESTILOS PARA UN NUEVO CURSO AGREGADO 
+*/
+
+.cajaDeImg{
+    display:inline-block;
+}
+
+.cajaDescripc{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.logo-esc{
+    width: 53px;
+    height: 65px;
+    position: relative;
+    bottom: 60px;
+    /*
+    margin-right: 20px; 
+    margin-bottom: 100px; */
+   
+}
+
+
+.text-esc-data{
+    display:block;
+    font-size: 15px;
+    font-family:Trebuchet MS 
+    
+}
+
+.clear{
+    clear: left;
+}
+
+.est-box{
+  height: 140px;
+}
+

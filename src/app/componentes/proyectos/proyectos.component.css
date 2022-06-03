@@ -1,0 +1,68 @@
+.container-projects{
+    position: relative;
+    top: 400px;
+   
+}
+
+.container-projects h3{
+    padding-top: 4px;
+}
+
+.img-project{
+    width: 548px;
+    margin-left: 3px;
+    margin-bottom: 30px;
+}
+
+.project-box{
+    display: inline-block
+}
+
+.div-icon-hidden{
+    position: absolute;
+    left: 15px;
+    top: 180px;
+    padding: 200px 256px 200px 260px;
+    opacity:0
+}
+
+.div-icon-hidden-2{
+    position: absolute;
+    top: 180px;
+    left: 565px;
+    padding: 200px 240px 200px 280px;
+    opacity:0;
+
+}
+
+.div-icon-hidden-3{
+    position: absolute;
+    top: 640px;
+    left: 10px;
+    padding: 200px 240px 200px 280px;
+    opacity: 0;
+}
+
+.div-icon-hidden-4{
+    position: absolute;
+    top: 640px;
+    left: 565px;
+    padding: 200px 240px 200px 280px;
+    opacity: 0;
+}
+
+.icon-hidden{
+    font-size:30px;
+    color: rgb(219, 26, 106);
+}
+
+.div-img:hover{
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+
+
+
